@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://c8.alamy.com/comp/DF67PG/uk-land-registry-land-certificate-property-document-DF67PG.jpg') no-repeat;
+    background-size: cover;
+}
+.one{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+}
+form {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+input, select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

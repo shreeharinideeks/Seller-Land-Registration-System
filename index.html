@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <div class="one">
+        <h1>Seller online registration platform</h1>
+    </div>
+    <div class="container">
+        <form id="registrationForm">
+            <h2>Land Registration Form</h2>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="middleName">Middle Name (if required):</label>
+            <input type="text" id="middleName" name="middleName">
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="proofOfOwnership">Proof of Ownership:</label>
+            <input type="file" id="proofOfOwnership" name="proofOfOwnership" accept="application/pdf" required>
+            
+            <label for="encumbranceCertificate">Encumbrance Certificate :</label>
+            <input type="file" id="encumbranceCertificate" name="encumbranceCertificate" accept="application/pdf" required>
+            
+            <label for="propertyTaxReceipts">Property Tax Receipts :</label>
+            <input type="file" id="propertyTaxReceipts" name="propertyTaxReceipts" accept="application/pdf" required>
+            
+            <label for="saleAgreement">Sale Agreement :</label>
+            <input type="file" id="saleAgreement" name="saleAgreement" accept="application/pdf" required>
+            
+            <label for="landSurvey">Land Survey and Measurement Records :</label>
+            <input type="file" id="landSurvey" name="landSurvey" accept="application/pdf" required>
+            
+            <label for="noc">No Objection Certificates (if required) :</label>
+            <input type="file" id="noc" name="noc" accept="application/pdf">
+            
+            <label for="powerOfAttorney">General Power of Attorney (if applicable) :</label>
+            <input type="file" id="powerOfAttorney" name="powerOfAttorney" accept="application/pdf">
+            
+            <label for="identityProof">Identity and Address Proof :</label>
+            <input type="file" id="identityProof" name="identityProof" accept="application/pdf" required>
+            
+            <label for="bankClearance">Bank Clearance (if the land is mortgaged) :</label>
+            <input type="file" id="bankClearance" name="bankClearance" accept="application/pdf">
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const fileInputs = document.querySelectorAll('input[type="file"]');
+            for (const fileInput of fileInputs) {
+                const file = fileInput.files[0];
+                if (file && file.type !== 'application/pdf') {
+                    alert('Only PDF documents are allowed for ' + fileInput.name);
+                    event.preventDefault();
+                    return;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
